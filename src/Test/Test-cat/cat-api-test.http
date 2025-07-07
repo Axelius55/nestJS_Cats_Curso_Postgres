@@ -1,0 +1,33 @@
+### Obtener todos los gatos
+GET localhost:3000/api/v1/cats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTcwMDQ3MCwiZXhwIjoxNzUxNzg2ODcwfQ.6hoIvR658ajE1qmZmHqvDxGSXOYxmos8T--4k4NWGgw
+
+###
+GET localhost:3000/api/v1/cats/117e9aa8-12da-4ed5-8361-f7dc9a77294c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTcwMDQ3MCwiZXhwIjoxNzUxNzg2ODcwfQ.6hoIvR658ajE1qmZmHqvDxGSXOYxmos8T--4k4NWGgw
+
+###
+POST localhost:3000/api/v1/cats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTY4NTQ5OSwiZXhwIjoxNzUxNzcxODk5fQ.jE3FqzdUIi4y-_iAAtish1tws1epTTrpwPOFzSL29V8
+Content-Type: application/json
+
+{
+    "catName": "Verde",
+    "catAge": 3,
+    "breed": "94d9613e-e1de-4137-92c2-abc4db98928f"
+}
+
+
+###eeeee
+PATCH localhost:3000/api/v1/cats/0a33168c-a039-478c-95a0-976ce5a154b9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTcwMTk3MywiZXhwIjoxNzUxNzg4MzczfQ.EiB9C9oUtDdxs72HIzgIcZza49eMwSMzDrLWrCwzPVo
+Content-Type: application/json
+
+{
+  "catName": "Naranja",
+  "breed": "94d9613e-e1de-4137-92c2-abc4db98928f"
+}
+
+###
+DELETE localhost:3000/api/v1/cats/0a33168c-a039-478c-95a0-976ce5a154b9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG9AZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NTE3MDI5MjQsImV4cCI6MTc1MTc4OTMyNH0.DSzRvAY_JShiOGrS4sYlJ5lsQiGKsVU_QLXilcrtwuY

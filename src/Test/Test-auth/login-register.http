@@ -1,0 +1,22 @@
+### Loguearte en la aplicación
+POST localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "userEmail": "axelito@gmail.com",
+  "userPassword": "12345678"
+}
+
+### Registrarte en la Aplicación como usuario
+POST localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "userName": "Axel Luis 2",
+  "userEmail": "axelito2@gmail.com",
+  "userPassword": "12345678"
+}
+
+### Entrar a tu perfil
+GET http://localhost:3000/api/v1/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTcwMTUwMCwiZXhwIjoxNzUxNzg3OTAwfQ.89dUMLTDTTXKXCzokyUFsrmqrGZbKfi7M8ZHUA2sh6k

@@ -1,0 +1,24 @@
+### Obtener todas las razas
+GET localhost:3000/api/v1/breeds
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTY3NzQ2OCwiZXhwIjoxNzUxNzYzODY4fQ.l7-ovrHZFxmRn4m__VDxmGvGvtbjTwu3ctt7rFO5s5M
+
+### Crear Raza
+POST localhost:3000/api/v1/breeds
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTY3NzI2MywiZXhwIjoxNzUxNzYzNjYzfQ.dugHm4Ld0c46OChuTMQiZRNqrGamauz1wSZmokdDbao
+Content-Type: application/json
+
+{
+  "breedName": "El mas nuevo"
+}
+
+### Actualizar raza
+PATCH localhost:3000/api/v1/breeds/
+Content-Type: application/json
+
+{
+  "breedName": "Barry"
+}
+
+###Eliminar Raza
+DELETE localhost:3000/api/v1/breeds/59f7feb2-cf48-4203-b6cc-dd5fdb21206d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF4ZWxpdG8xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTY3NzY4MiwiZXhwIjoxNzUxNzY0MDgyfQ.PEL53FpDtVrOtJw6LOdhSSTfq4tN7eJvJA_PQzIWk9Y
