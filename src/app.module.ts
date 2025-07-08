@@ -23,6 +23,15 @@ import * as process from 'node:process';
       password: process.env.POSTGRES_PASSWORD,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: process.env.POSTGRES_SSL === 'true',
+      extra: {
+        ssl:
+          process.env.POSTGRES_SSL === 'true'
+            ? {
+                rejectUnauthorized: false,
+          }
+            : null,
+      },
     }),
     BreedsModule,
     UsersModule,
