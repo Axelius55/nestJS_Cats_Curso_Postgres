@@ -29,7 +29,7 @@ import * as process from 'node:process';
           process.env.POSTGRES_SSL === 'true'
             ? {
                 rejectUnauthorized: false,
-          }
+              }
             : null,
       },
     }),
