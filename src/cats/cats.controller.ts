@@ -10,13 +10,14 @@ import {
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
-import { Roles } from '../auth/decorators/roles.decorator';
 import { Auth } from '../auth/decorators/auth.decorator';
 import { Role } from '../common/enums/role.enum';
 import { ActiveUser } from '../common/decorators/active-user.decorator';
 import { UserActiveInterface } from '../common/interfaces/user-active.interface';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Auth(Role.USER)
+@ApiBearerAuth()
 @Controller('cats')
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}

@@ -7,6 +7,7 @@ import { Role } from '../common/enums/role.enum';
 import { Auth } from './decorators/auth.decorator';
 import { ActiveUser } from '../common/decorators/active-user.decorator';
 import { UserActiveInterface } from '../common/interfaces/user-active.interface';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 interface RequestWithUser extends Request {
   user: {
@@ -37,6 +38,7 @@ export class AuthController {
   //}
 
   @Get('profile')
+  @ApiBearerAuth()
   @Auth(Role.USER)
   profile(@ActiveUser() user: UserActiveInterface) {
     return this.authService.profile(user);
