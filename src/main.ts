@@ -16,11 +16,7 @@ async function bootstrap() {
       transform: true, //transformar datos siempre que se pueda
     }),
   );
-  app.enableCors({
-    origin: 'https://next-js-nest-cats-postgres.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  });
+  app.enableCors();
 
   const config = new DocumentBuilder()
     .setTitle('Cats example')

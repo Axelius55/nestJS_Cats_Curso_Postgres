@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateBreedDto } from './dto/create-breed.dto';
 import { UpdateBreedDto } from './dto/update-breed.dto';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -20,12 +20,22 @@ export class BreedsService {
     return this.breedRepository.find();
   }
 
-  findOne(id: string) {
-    return `This action returns a #${id} breed`;
+  async findOne(id: string) {
+    const breed = await this.breedRepository.findOneBy({
+      breedID: id,
+    });
+    if (!breed) {
+      throw new NotFoundException('Breed not found');
+    }
+    return breed;
   }
 
-  update(id: string, updateBreedDto: UpdateBreedDto) {
-    return;
+  async update(id: string, updateBreedDto: UpdateBreedDto) {
+    await this.findOne(id);
+    const newbreed = await this.breedRepository.update(id, {
+      ...updateBreedDto,
+    });
+    return newbreed;
   }
 
   remove(id: string) {

@@ -45,3 +45,7 @@ export class BreedsController {
     return this.breedsService.remove(id);
   }
 }
+
+
+//    "userEmail": "axelpp.alacran@gmail.com",
+//    "userPassword": "holaquetal111"
